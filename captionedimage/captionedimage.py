@@ -7,7 +7,6 @@ from xblock.fields import Scope, String
 from xblock.fragment import Fragment
 from xblockutils.studio_editable import StudioEditableXBlockMixin
 
-
 class CaptionedImageXBlock(StudioEditableXBlockMixin, XBlock):
     """
     A simple xblock to make images neater and have captions with long descriptions and copyright acknowledgments.
@@ -30,8 +29,6 @@ class CaptionedImageXBlock(StudioEditableXBlockMixin, XBlock):
         default="", scope=Scope.content,
         help="Enter a long description of your image here. This will be visible to all users. Do not repeat the contents of your caption, instead describe the image as you would to someone else over the phone.")
 
-
-
     # Make fields editable in studio
     editable_fields = ('display_name', 'imageURL', 'caption', 'attribution', 'longDescription', )
 
@@ -41,16 +38,9 @@ class CaptionedImageXBlock(StudioEditableXBlockMixin, XBlock):
         return data.decode("utf8")
 
     def student_view(self, context=None):
-        html_str = pkg_resources.resource_string(__name__, "static/html/captionedimage.html")
-        frag = Fragment(unicode(html_str).format(self=self))
-
-        # Load the CSS and JavaScript fragments from within the package
-        css_str = pkg_resources.resource_string(__name__, "static/css/captionedimage.css")
-        frag.add_css(unicode(css_str))
-
-        js_str = pkg_resources.resource_string(__name__,
-                                               "static/js/src/captionedimage.js")
-        frag.add_javascript(unicode(js_str))
-
-        frag.initialize_js('ImgBlock')
-return frag
+        html = self.resource_string("static/html/captionedimage.html")
+        frag = Fragment(html.format(self=self))
+        frag.add_css(self.resource_string("static/css/captionedimage.css"))
+        frag.add_javascript(self.resource_string("static/js/src/captionedimage.js"))
+        frag.initialize_js('PrintXBlock')
+        return frag
