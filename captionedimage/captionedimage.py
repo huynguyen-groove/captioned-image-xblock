@@ -42,5 +42,4 @@ class CaptionedImageXBlock(StudioEditableXBlockMixin, XBlock):
         frag = Fragment(html.format(self=self))
         frag.add_css(self.resource_string("static/css/captionedimage.css"))
         frag.add_javascript(self.resource_string("static/js/src/captionedimage.js"))
-        frag.initialize_js('PrintXBlock')
         return frag
