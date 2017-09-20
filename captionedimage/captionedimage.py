@@ -30,7 +30,7 @@ class CaptionedImageXBlock(StudioEditableXBlockMixin, XBlock):
         help="Enter a long description of your image here. This will be visible to all users. Do not repeat the contents of your caption, instead describe the image as you would to someone else over the phone.")
 
     # Make fields editable in studio
-    editable_fields = ('display_name', 'imageURL', 'caption', 'attribution', 'longDescription', )
+    editable_fields = ('display_name', 'imageURL', 'caption', 'attribution', 'longDesc', )
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
