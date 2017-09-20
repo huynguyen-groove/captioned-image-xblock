@@ -1,4 +1,4 @@
-"""Setup for c2r XBlock."""
+"""Setup for captioned image XBlock."""
 
 import os
 from setuptools import setup
