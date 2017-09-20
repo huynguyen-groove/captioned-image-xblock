@@ -1,22 +1,14 @@
 /* Javascript for CaptionedImageXBlock. */
-function CaptionedImageXBlock(runtime, element) {
-
-    function updateCount(result) {
-        $('.count', element).text(result.count);
-    }
-
-    var handlerUrl = runtime.handlerUrl(element, 'increment_count');
-
-    $('p', element).click(function(eventObject) {
-        $.ajax({
-            type: "POST",
-            url: handlerUrl,
-            data: JSON.stringify({"hello": "world"}),
-            success: updateCount
-        });
-    });
-
-    $(function ($) {
-        /* Here's where you'd do things on page load. */
+function showDesc(event) {
+    var buttonPressed = $(event.target);
+    var capLongDesc = buttonPressed.nextAll('.cixblockLongDesc');
+    capLongDesc.slideToggle(100, function() {
+        if (capLongDesc.is(":hidden")) {
+            buttonPressed.text("Show long description");
+            buttonPressed.attr("aria-expanded", "false");
+        } else {
+            buttonPressed.text("Hide long description");
+            buttonPressed.attr("aria-expanded", "true");
+        }
     });
 }
