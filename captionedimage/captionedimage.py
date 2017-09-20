@@ -25,7 +25,7 @@ class CaptionedImageXBlock(StudioEditableXBlockMixin, XBlock):
     attribution = String(display_name="Attribution", multiline_editor='html', resettable_editor=False,
         default="", scope=Scope.content,
         help="Enter the copyright holder or other attribution for the image.")
-    longDescription = String(display_name="Long description text", multiline_editor='html', resettable_editor=False,
+    longDesc = String(display_name="Long description text", multiline_editor='html', resettable_editor=False,
         default="", scope=Scope.content,
         help="Enter a long description of your image here. This will be visible to all users. Do not repeat the contents of your caption, instead describe the image as you would to someone else over the phone.")
 
