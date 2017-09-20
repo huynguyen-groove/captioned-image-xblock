@@ -54,21 +54,3 @@ class CaptionedImageXBlock(StudioEditableXBlockMixin, XBlock):
 
         frag.initialize_js('ImgBlock')
 return frag
-
-    # TO-DO: change this to create the scenarios you'd like to see in the
-    # workbench while developing your XBlock.
-    @staticmethod
-    def workbench_scenarios():
-        """A canned scenario for display in the workbench."""
-        return [
-            ("CaptionedImageXBlock",
-             """<captionedimage/>
-             """),
-            ("Multiple CaptionedImageXBlock",
-             """<vertical_demo>
-                <captionedimage/>
-                <captionedimage/>
-                <captionedimage/>
-                </vertical_demo>
-             """),
-        ]
