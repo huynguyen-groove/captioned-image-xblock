@@ -17,7 +17,7 @@ class CaptionedImageXBlock(StudioEditableXBlockMixin, XBlock):
     display_name = String(display_name="Display name", default='Image')
     template = String(display_name="Style", default="1", scope=Scope.content, values=('1', '2'),
         help="Template 1 is suitable for images 910px wide or larger. Template 2 is suitable for images 640px wide or larger. Portrait images should use template 2, while landscape works with either. Please note that if your image is too small, it will be enlarged for potentially poor quality results.")
-    imageURL = String(display_name="Image URL", default="", scope=Scope.content,
+    imageURL = String(display_name="Image URL", default="http://via.placeholder.com/1920x1080?text=Placeholder", scope=Scope.content,
         help="Enter the URL of your image.")
     caption = String(display_name="Caption", multiline_editor='html', resettable_editor=False,
         default="", scope=Scope.content,
