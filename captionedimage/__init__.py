@@ -1,0 +1,1 @@
+from .captionedimage import CaptionedImageXBlock

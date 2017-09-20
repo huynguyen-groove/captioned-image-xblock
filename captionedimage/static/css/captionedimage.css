@@ -1,0 +1,64 @@
+    /* CSS for CaptionedImageXBlock */
+
+.cixblockFig {
+    margin: 2% 0 2% 0;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-left: 5px solid #acacac;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.cixblockCaption {
+    margin: 0;
+    padding: 8px 14px 10px 14px;
+    color: #2c2c2c;
+    font-style: normal;
+    font-size: 1.03em;
+    font-weight: 100;
+    line-height: 1.6em !important;
+    letter-spacing: 0.25px;
+}
+.cixblockCopyrightLine {
+    text-align: right;
+    padding: 8px;
+    margin: 0 !important;
+    font-size: 0.9em !important;
+    font-style: normal;
+    color: #3c3c3c;
+}
+.cixblockLongDesc {
+    display: none;
+    margin: 8px;
+    padding: 8px;
+}
+.cixblockLongDescBtn {
+    margin: 8px;
+}
+
+.cixblockImg-1{
+
+}
+
+.cixblockImg-2 {
+    width: 70%;
+    float: right;
+    box-sizing: border-box;
+    margin-left: 2%;
+}
+@media (max-width: 710px) {
+    .cixblockImg-2 {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cixblockFig {
+        max-width: 100%;
+        float: none;
+        margin: 2% 0;
+        border-left: 2px solid #acacac;
+    }
+}
