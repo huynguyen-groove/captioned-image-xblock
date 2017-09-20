@@ -22,6 +22,7 @@
     text-align: right;
     padding: 8px;
     margin: 0;
+    margin-bottom:0 !important;
     font-size: 0.9em;
     font-style: normal;
     color: #3c3c3c;
