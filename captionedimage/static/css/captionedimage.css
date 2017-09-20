@@ -19,7 +19,7 @@
     letter-spacing: 0.25px;
 }
 .cixblockCopyrightLine {
-    text-align: right;
+    text-align: right !important;
     padding: 8px;
     margin: 0 !important;
     font-size: 0.9em !important;
