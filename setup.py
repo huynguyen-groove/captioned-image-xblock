@@ -21,7 +21,7 @@ def package_data(pkg, roots):
 
 setup(
     name='captionedimage',
-    version='1.0',
+    version='1.1',
     description='Captioned Image Xblock',   
     license='AGPL v3',         
     packages=[
