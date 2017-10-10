@@ -44,8 +44,15 @@
     width: 70%;
     float: right;
     box-sizing: border-box;
-    margin-left: 2%;
+    margin: 0 0 2% 2%;
 }
+.cixblockImg-3 {
+    width: 40%;
+    float: right;
+    box-sizing: border-box;
+    margin: 0 0 2% 2%;
+}
+
 @media (max-width: 710px) {
     .cixblockImg-2 {
         float: none;
